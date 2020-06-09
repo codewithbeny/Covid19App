@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SymbtomFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/wear_mask"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            >
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                android:layout_margin="10dp"/>
+
+
+
+            <ImageView
+                android:id="@+id/search1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"/>
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="Stay At \n Home"
+                android:textColor="#93006c"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                 android:layout_alignParentRight="true"
+                android:fontFamily="sans-serif-condensed"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"/>
+
+
+
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            android:elevation="10dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Symbtoms:"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@android:color/background_dark"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"/>
+
+
+<LinearLayout
+    android:id="@+id/linearji"
+    android:layout_marginTop="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="3">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_cough"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cough"
+            android:layout_gravity="center"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            android:fontFamily="serif"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cold"
+            android:layout_gravity="center"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            android:fontFamily="serif"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_fever"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fever"
+            android:layout_gravity="center"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold"
+            android:fontFamily="serif"/>
+    </LinearLayout>
+
+
+</LinearLayout>
+            <TextView
+                android:id="@+id/pre"
+                android:layout_below="@id/linearji"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precautions:"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/background_dark"
+                android:fontFamily="serif"
+                android:textStyle="bold"/>
+<TextView
+    android:id="@+id/prec"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/pre"
+    android:text="1 STAY home \n
+2 KEEP a safe distance\n
+3 WASH hands often\n
+4 COVER your cough \n
+5 SICK? Call the helpline"
+    android:fontFamily="serif"
+    android:textColor="@android:color/background_dark"
+    android:textSize="20sp"/>
+                <ImageView
+                    android:layout_below="@id/prec"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/worldcorona"
+                    />
+
+            </RelativeLayout>
+
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

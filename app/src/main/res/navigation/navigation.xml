@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/starter">
+
+    <fragment
+        android:id="@+id/affected"
+        android:name="com.india.covid9.Affected"
+        android:label="activity_affected_countries"
+        tools:layout="@layout/activity_affected_countries" >
+        <action
+            android:id="@+id/action_affected_to_detailsFrag"
+            app:destination="@id/detailsFrag" >
+
+        </action>
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFrag"
+        android:name="com.india.covid9.DetailsFrag"
+        android:label="activity_details"
+        tools:layout="@layout/activity_details" >
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_detailsFrag_to_affected"
+            app:destination="@id/affected" />
+        <action
+            android:id="@+id/action_detailsFrag_to_indiaDetails"
+            app:destination="@id/indiaDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/indiaDetails"
+        android:name="com.india.covid9.IndiaDetails"
+        android:label="fragment_india_details"
+        tools:layout="@layout/fragment_india_details" />
+    <fragment
+        android:id="@+id/starter"
+        android:name="com.india.covid9.Starter"
+        android:label="fragment_starter"
+        tools:layout="@layout/fragment_starter" >
+        <action
+            android:id="@+id/action_starter_to_indiaDetails"
+            app:destination="@id/indiaDetails" />
+        <action
+            android:id="@+id/action_starter_to_symbtoms2"
+            app:destination="@id/symbtoms" />
+        <action
+            android:id="@+id/action_starter_to_affected"
+            app:destination="@id/affected" />
+    </fragment>
+    <fragment
+        android:id="@+id/symbtoms"
+        android:name="com.india.covid9.SymbtomFragment"
+        android:label="fragment_symbtoms"
+        tools:layout="@layout/fragment_symbtoms" >
+        <action
+            android:id="@+id/action_symbtoms_to_starter2"
+            app:destination="@id/starter" />
+        <action
+            android:id="@+id/action_symbtoms_to_affected2"
+            app:destination="@id/affected" />
+    </fragment>
+</navigation>
